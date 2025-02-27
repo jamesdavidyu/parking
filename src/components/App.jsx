@@ -4,7 +4,16 @@ import { useEffect } from "react";
 import BootstrapClient from "./BootstrapClient";
 
 export const App = () => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    }
+    $(document).ready(() => {
+      $("#button").click(() => {
+        alert("Working");
+      });
+    });
+  }, []);
 
   return (
     <>
