@@ -6,8 +6,10 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function BootstrapClient() {
   useEffect(() => {
-    $("#button").click(() => {
-      alert("Working");
+    $(document).ready(() => {
+      $("#button").click(() => {
+        alert("Working");
+      });
     });
   }, []);
 }
