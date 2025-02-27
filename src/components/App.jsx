@@ -1,7 +1,7 @@
 "use client";
+
 import $ from "jquery";
 import { useEffect } from "react";
-import BootstrapClient from "./BootstrapClient";
 
 export const App = () => {
   useEffect(() => {
@@ -16,8 +16,7 @@ export const App = () => {
   }, []);
 
   return (
-    <>
-      <BootstrapClient />
+    <div>
       <form className="d-flex flex-column w-25">
         <input placeholder="Username" />
         <input placeholder="Password" type="password" />
@@ -25,6 +24,6 @@ export const App = () => {
           Test
         </button>
       </form>
-    </>
+    </div>
   );
 };
